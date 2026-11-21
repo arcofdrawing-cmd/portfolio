@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #fff;
+    color: #222;
+    font-family: "EB Garamond", Georgia, serif;
+    text-align: center;
+  }
+  header { padding: 2.5rem 1rem 1rem; }
+  .site-name { font-size: 1.6rem; }
+
+  /* Hamburger menu */
+  #menu-btn {
+    background: none; border: 0; cursor: pointer;
+    padding: 1rem; margin-top: 1rem;
+  }
+  #menu-btn span {
+    display: block; width: 40px; height: 3px;
+    background: #222; margin: 8px auto;
+  }
+  nav { display: none; padding-bottom: 1rem; }
+  nav.open { display: block; }
+  nav a {
+    display: block; padding: .5rem;
+    color: #222; text-decoration: none; font-size: 1.3rem;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: clamp(2.4rem, 8vw, 4rem);
+    line-height: 1.25;
+    margin: 4rem auto;
+    max-width: 14ch;
+  }
+
+  /* Gallery: one image per row, centered */
+  main { max-width: 900px; margin: 0 auto; padding: 0 1rem 6rem; }
+  main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 5rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="site-name">YourName</div>
+  <button id="menu-btn" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+  <nav id="menu">
+    <a href="#">Pen and Ink</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<h1>Pen and Ink Illustrations</h1>
+
+<main>
+  <!-- Put your images in an "images" folder and list them here -->
+  <img src="images/drawing1.jpeg" alt="Drawing 1">
+  <img src="images/drawing2.jpg" alt="Drawing 2">
+  <img src="images/drawing3.jpg" alt="Drawing 3">
+  <img src="images/drawing4.jpg" alt="Drawing 4">
+  <img src="images/drawing5.jpg" alt="Drawing 5">
+  <img src="images/drawing6.png" alt="Drawing 6">
+  <img src="images/drawing7.png" alt="Drawing 7">
+  <img src="images/drawing8.jpg" alt="Drawing 8">
+  <img src="images/drawing9.png" alt="Drawing 9">
+  <img src="images/drawing10.jpg" alt="Drawing 10">
+  <img src="images/drawing11.png" alt="Drawing 11">
+  <img src="images/drawing12.jpg" alt="Drawing 12">
+</main>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+  btn.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open);
+  });
+</script>
+</body>
+</html>
